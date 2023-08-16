@@ -1,0 +1,17 @@
+.game-card {
+    max-width: 350px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}
+.game-icon {
+    font-size: 10%;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
