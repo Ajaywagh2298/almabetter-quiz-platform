@@ -28,25 +28,26 @@ const SelectQuizType = () => {
         open={true}
         aria-labelledby="responsive-dialog-title" 
         PaperProps={{
-          style: {
-           borderRadius:"20px",
-           padding:"5px",
-           border:"2px solid #868686",
+          style: {          
+            
            outline: "none",
-           boxShadow: "0 0 10px  #868686",
+           borderRadius: "10px",
+           boxShadow: "2px 2px 4px white",
            width:"30%",
           },
         }}
       >
-        <DialogTitle id="responsive-dialog-title" style={{color:"#868686",marginLeft:"5%"}}>
+        <DialogTitle id="responsive-dialog-title" style={{marginLeft:"5%"}}>
           {"Select Question Type to Proceed"}
         </DialogTitle>
                <DialogActions sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
                    <Button onClick={popupfunc} variant="outlined" 
                    style={{color:"#868686", 
-                   border:"2px solid #1ABC9C", fontWeight:"500", 
-                  boxShadow: "0 0 10px  #1ABC9C",
-                  padding:"0 0 0 0",width:"70%"}}>
+                         border:"2px solid #CDB7F6", fontWeight:"500", 
+                          boxShadow: "2px 2px 4px #F4E3FF",
+                           marginBottom:"6px",
+                           padding:"0 0 0 0px",width:"70%"}}>
+                    MCQ(Single Correct)
                    </Button>
         </DialogActions>
       </Dialog>
