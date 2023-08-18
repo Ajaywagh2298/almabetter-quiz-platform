@@ -1,0 +1,139 @@
+/*styling for the CreateQuizPage */
+
+.heading,h4{
+    display: flex;
+    justify-content: center;
+    font-family: Poppins,sans-serif;
+    color:#1ABC9C;
+    padding-top: 2px;
+    text-shadow:1px 1px 2px #dc7733cf;
+    }
+
+.quizForm{
+    display: flex;
+    font-family: Poppins,sans-serif;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width:80%;
+    height:100%;
+    padding: 30px 30px;
+    
+    box-shadow:2px 2px 5px #dc7733cf;
+}
+
+.outline{
+    display: flex;
+  justify-content: center;
+ 
+  
+}
+
+.upper{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border:1px solid #1ABC9C;
+    text-align: center;
+}
+.description{
+    height: 60px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border:1px solid #1ABC9C;
+    text-align: center;
+}
+
+label{
+margin-top: 50px;
+margin-bottom: 20px;
+font-size: large;
+font-weight: bold;
+margin-left: 45%;
+color:#DC7633;
+
+}
+.question{
+    width:80%;
+    height:30px;
+    margin-left: 9%;
+    border:1px solid #1ABC9C;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+
+.answerSection{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.checkBox{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    width:150px;
+    
+    }
+
+    .viewAnswer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:20px;
+        flex-wrap: wrap;
+           }
+  
+    .option{
+        justify-content: space-between;
+        display: flex;
+        border-radius: 5px;
+        padding-left: 5px;
+        text-align: center;
+        margin:5px;
+        align-items: center;
+        width:150px;
+        border:1px solid #1ABC9C;
+        text-align: center;
+      
+    }
+
+    .questionBtn{
+        width: 15%;
+        margin: 0 auto;
+        border:1px solid #DC7633;
+        border-radius: 10px;
+        box-shadow: 0 0 10px  #DC7633;
+        text-align: center;
+        
+    }
+
+    hr{
+        border:1px solid #DC7633;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+
+    #submitBtn{
+        color: #868686;
+        border-radius: 10px;
+        width:100px;
+        height:50px;
+        font-weight: bold;
+        float: right;
+        font-size: larger;
+        border:2px solid #DC7633;
+        box-shadow: 0 0 10px  #DC7633;
+    }
