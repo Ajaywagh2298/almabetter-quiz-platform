@@ -14,16 +14,6 @@ const PlayQuizPage = () => {
 
    const quiz = useSelector((state) => state.reducer.quiz);
 
-    // const quiz = [{
-    //     "id": 1,
-    //     "name": "Quiz 1",
-    //     "description": "This is a quiz about general knowledge",
-    // },
-    // {
-    //     "id": 2,
-    //     "name": "Quiz 2",
-    //     "description": "This is a quiz about general knowledge",
-    // }]
     const name = useRef();
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -67,7 +57,7 @@ const PlayQuizPage = () => {
                                 required
                                 className="user-name"
                                 id="outlined-required"
-                                label="Enter Play Name"
+                                label="Enter Player Name"
                                 placeholder={"....."}
                                 autoFocus
                                 ref={name}
@@ -86,9 +76,7 @@ const PlayQuizPage = () => {
                                                 <CardContent>
                                                     <Typography gutterBottom variant="h6" component="div" sx={{textAlign:"center"}}>
                                                         <h4>{el.title}</h4>
-                                                        <p>{console.log(el)}</p>
                                                     </Typography>
-
                                                 </CardContent>
                                             </CardActionArea>
                                         </Card>
