@@ -48,10 +48,12 @@ const SelectQuizType = () => {
                             <Button onClick={popupfunc} variant="outlined"
                                 style={{
                                     color: "#868686",
-                                    border: "2px solid #CDB7F6", fontWeight: "500",
+                                    border: "2px solid #CDB7F6",
+                                    fontWeight: "500",
                                     boxShadow: "2px 2px 4px #F4E3FF",
                                     marginBottom: "6px",
-                                    padding: "0 0 0 0px", width: "70%"
+                                    padding: "0 0 0 0px",
+                                    width: "70%"
                                 }}>
                                 MCQ(Single Correct)
                             </Button>

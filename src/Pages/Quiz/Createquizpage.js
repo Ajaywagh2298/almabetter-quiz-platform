@@ -216,9 +216,9 @@ event.preventDefault();
                 style={{marginRight:"10px",border:"none"}}
                 variant="outlined"
                 />  
-                <h3 style={{color:"#DC7AC5"}}>Correct</h3>
+                <h3 style={{color:"#DC7633"}}>Correct</h3>
                 <Button sx={{marginLeft:"10px",cursor:"pointer"}}  onClick={addOptionHandler}>
-                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#DC7AC5"}}/>
+                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#DC7633"}}/>
                 </Button>
               </div>
             </div>
@@ -230,7 +230,7 @@ event.preventDefault();
                     style={
                       el.correct
                         ? { background: "#32a84e" }
-                        : { background: "#DC7AC5" }   
+                        : { background: "#DC7633" }   
                       } //if correct is checked then show the option's bakcground as green color else grey.
                       
                   >
