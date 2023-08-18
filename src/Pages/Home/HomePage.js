@@ -18,7 +18,7 @@ const HomePage = () => {
                                 alt="create quiz"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h6" component="div" sx={{textAlign:"center",fontFamily:"sans-serif",color:'#34495E'}}>
+                                <Typography gutterBottom variant="h6" component="div" sx={{textAlign:"center",fontFamily:"sans-serif",color:'#34495E'}} >
                                     Create New Quiz
                                 </Typography>
 
