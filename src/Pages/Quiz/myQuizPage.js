@@ -10,6 +10,7 @@ import { useState } from "react";
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import FormControlLabel, { formControlLabelClasses } from '@mui/material/FormControlLabel';
+import queFound from "../Image/queFound.png"
 
 //const label = { inputProps: { 'aria-label': 'Switch demo' } };
 const Android12Switch = styled(Switch)(({ theme }) => ({
@@ -101,7 +102,7 @@ const MyQuiz = () => {
       ) : (
         <div className="all-quiz-container">
           {Quiz.length === 0 ? (          //if there are no quiz then show this message else show the list of quizzes
-            <p style={{ color: "black",height:"150px" }}>Currently there is no quiz...</p>
+           <img src={queFound} className={'question-found'} alt={'Question Not Found'}/>
           ) : (
             <div className="table">
               <table>
