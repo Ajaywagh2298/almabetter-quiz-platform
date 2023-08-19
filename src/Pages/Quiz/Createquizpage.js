@@ -185,6 +185,7 @@ event.preventDefault();
             
           
            <h4>ADD QUIZ QUESTIONS</h4><br/>
+           <div className="lower">
            <Container maxWidth="" className="formContainer">
             <div className="QA">
               <label htmlFor="question">Question {count}:-</label><br/><br/>
@@ -255,6 +256,7 @@ event.preventDefault();
               <Button  onClick={addQuestionHandler}>Add Question </Button>
             </div>
           </Container>
+          </div>
             
                <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="outlined"/>
           </form>
