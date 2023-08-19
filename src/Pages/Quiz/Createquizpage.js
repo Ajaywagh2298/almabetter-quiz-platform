@@ -5,6 +5,7 @@ import {addQuiz} from '../../ReduxController/Actions/ActionsScript';
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
 import "../CSS/CreateQuizPage.css";
+import Container from '@mui/material/Container';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 
 /*created React functional component named CreateQuizPage*/
@@ -158,6 +159,7 @@ event.preventDefault();
           <form action="" onSubmit={onSaveHandler}>
             <div className="upper">
                 {/*input for Title*/}
+                <Container maxWidth="" className="formContainer">
               <input
                 type="text"
                 placeholder="Add Title"
@@ -177,10 +179,13 @@ event.preventDefault();
                 required
                 ref={descriptionRef}
                 variant="outlined"
-              />                          
+              />    
+              </Container>                      
             </div>
-           <hr/>
-           <h4>ADD QUIZ QUESTIONS</h4>
+            
+          
+           <h4>ADD QUIZ QUESTIONS</h4><br/>
+           <Container maxWidth="" className="formContainer">
             <div className="QA">
               <label htmlFor="question">Question {count}:-</label><br/><br/>
               <input
@@ -249,7 +254,8 @@ event.preventDefault();
             <div className="questionBtn">
               <Button  onClick={addQuestionHandler}>Add Question </Button>
             </div>
-            <hr/>
+          </Container>
+            
                <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="outlined"/>
           </form>
         </div>

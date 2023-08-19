@@ -20,7 +20,7 @@
     height:100%;
     padding: 30px 30px;
     
-    box-shadow:2px 2px 5px #dc7733cf;
+    box-shadow:2px 2px 5px #484545;
 }
 
 .outline{
@@ -35,10 +35,10 @@
     flex-direction: column;
 }
 .title{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     height: 30px;
     width: 50%;
-    margin: 0 auto;
+    margin-left: 25%;
     border-radius: 5px;
     border:1px solid #1ABC9C;
     text-align: center;
@@ -46,7 +46,7 @@
 .description{
     height: 60px;
     width: 50%;
-    margin: 0 auto;
+    margin-left: 25%;
     border-radius: 5px;
     border:1px solid #1ABC9C;
     text-align: center;
@@ -119,12 +119,13 @@ color:#DC7633;
         
     }
 
-    hr{
-        border:1px solid #DC7633;
-        margin-top: 50px;
+    .formContainer{
+        padding:50px;
+        border-radius:20px;
         margin-bottom: 30px;
-    }
+        box-shadow:2px 2px 5px #484545;
 
+    }
 
     #submitBtn{
         color: #868686;
