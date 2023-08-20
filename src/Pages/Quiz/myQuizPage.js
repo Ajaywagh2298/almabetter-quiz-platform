@@ -12,7 +12,7 @@ import { styled } from '@mui/material/styles';
 import FormControlLabel, { formControlLabelClasses } from '@mui/material/FormControlLabel';
 import queFound from "../Image/queFound.png"
 
-//const label = { inputProps: { 'aria-label': 'Switch demo' } };
+
 const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
   '& .MuiSwitch-track': {
@@ -51,12 +51,12 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 //React functional component named MyQuiz
 const MyQuiz = () => {
 
-  const dispatch = useDispatch();     //for dispatching action
-  const [modal, setModal] = useState(false);  //for showing and hiding the delete modal
-  const [deleteID, setDeleteID] = useState(); //for storing the id of the quiz to be deleted
+  const dispatch = useDispatch();     //dispatch using for action
+  const [modal, setModal] = useState(false);  //this is used for  the delete modal is hide or show.
+  const [deleteID, setDeleteID] = useState(); //this is for storing the id of the deleted quiz.
   
 
-  const handleDelete = (id) => {       //this function will execute when delete icon is clicked 
+  const handleDelete = (id) => {       //this function is for when delete icon is clicked this function will execute
     setDeleteID(id);
     setModal(true);
   };
@@ -66,12 +66,12 @@ const MyQuiz = () => {
     setModal(false);
   };
 
-  const toggleHandler=(id)=>{          //this function will execute when toggle buton is clicked
+  const toggleHandler=(id)=>{          //When i clicked the toggle button this function is executed.
  
     dispatch(toggleActive(id))
   }
 
-  const Quiz = useSelector((state) => state.reducer.quiz);   //for for getting the data stored in redux store
+  const Quiz = useSelector((state) => state.reducer.quiz);   //this function is for getting the data  has stored in redux store
 
   return (
     <div className="whole" style={{ marginTop: "100px" }}>
@@ -94,14 +94,14 @@ const MyQuiz = () => {
           <h2>Do you really want to delete this!?</h2>
           <p>Deleting this would lead to permanent loss of the quiz.</p>
           <div className="delbtn">
-          <Button variant="contained" onClick={() => deleteYes()}>Yes</Button>{" "}  {/**if yes button is clicked then delete the quiz */}
-          <Button sx={{marginLeft:"10px"}} variant="contained" onClick={() => setModal(false)}>No</Button>{/**if no button is clicked then set the value of madal to false which will close the modal */}
+          <Button variant="contained" onClick={() => deleteYes()}>Yes</Button>{" "}  {/**if i clicked yes button then delete the quiz */}
+          <Button sx={{marginLeft:"10px"}} variant="contained" onClick={() => setModal(false)}>No</Button>{/**if i clicked the no button then set the modal value to false which will close the modal */}
           </div>
         </div>
         </div>
       ) : (
         <div className="all-quiz-container">
-          {Quiz.length === 0 ? (          //if there are no quiz then show this message else show the list of quizzes
+          {Quiz.length === 0 ? (          //show this message when there are no quiz otherwise show the list of quizzes.
            <img src={queFound} className={'question-found'} alt={'Question Not Found'}/>
           ) : (
             <div className="table">
