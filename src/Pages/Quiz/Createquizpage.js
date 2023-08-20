@@ -137,7 +137,7 @@ const CreateQuizPage = () => {
         isActive: true,
       };
     
-      const confirmPopup = window.confirm("Quiz saved successfully! What would you like to start playing?");
+      const confirmPopup = window.confirm(`Quiz saved successfully!\n\nClick on OK to play the quiz!\nCancel it to view the quiz!`);
       
       if (confirmPopup) {
         // User chose to navigate to "Play Quiz" page
@@ -202,7 +202,7 @@ const CreateQuizPage = () => {
            <div className="lower">
            <Container maxWidth="" className="formContainer">
             <div className="QA">
-              <label htmlFor="question">Question {count}:-</label><br/><br/>
+              <label htmlFor="question">QUESTION {count}.</label><br/><br/>
               <input
                 type="text "
                 className="question"
@@ -227,18 +227,19 @@ const CreateQuizPage = () => {
               />
 
               {/*check box for selecting correct answer */}
-              <div className="checkBox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+              <div className="checkBox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+      
               <input
                   type="checkbox"
                   id="check"
                   name="correct"
                   ref={CorrectAnswerRef}
-                style={{marginRight:"10px",border:"none"}}
-                variant="outlined"
+                style={{marginRight:"10px",border:"none",}}
+                variant="outlined "
                 />  
-                <h3 style={{color:"#DC7633"}}>Correct</h3>
+                <h4 style={{color:"#33CC99", marginTop:"10px"}}>CORRECT</h4>
                 <Button sx={{marginLeft:"10px",cursor:"pointer"}}  onClick={addOptionHandler}>
-                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#DC7633"}}/>
+                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#33CC99"}}/>
                 </Button>
               </div>
             </div>
@@ -249,8 +250,8 @@ const CreateQuizPage = () => {
                     className="option" key={i}
                     style={
                       el.correct
-                        ? { background: "#32a84e" }
-                        : { background: "#DC7633" }   
+                        ? { background: "#32a84e",color:"white",width:"45%" }
+                        : { background: "#4B3621", color:"white",width:"45%" }   
                       } //if correct is checked then show the option's bakcground as green color else grey.
                       
                   >
@@ -258,21 +259,26 @@ const CreateQuizPage = () => {
                     <Button
                       size="small"
                       onClick={() => deleteHandler(el.id)}
-                      sx={{ height: "50%", color: "black" }}
+                      sx={{ height: "50%", color: "white" }}
                     >
                       <DeleteIcon />
                     </Button>
                   </div>
                 );
               })}
-            </div>
+            </div><br/>
             <div className="questionBtn">
-              <Button  onClick={addQuestionHandler}>Add Question </Button>
+              <Button variant="contained #33CC99" onClick={addQuestionHandler}>
+      
+
+                ADD QUESTION 
+                
+                </Button>
             </div>
           </Container>
           </div>
             
-               <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="outlined"/>
+               <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="contained"/>
           </form>
         </div>
       </div>

@@ -48,7 +48,7 @@ const SelectQuizType = () => {
                             <Button onClick={popupfunc} variant="outlined"
                                 style={{
                                     color: "#868686",
-                                    border: "2px solid #CDB7F6",
+                                    border: "2px solid #1ABC9C",
                                     fontWeight: "500",
                                     boxShadow: "2px 2px 4px #F4E3FF",
                                     marginBottom: "6px",
