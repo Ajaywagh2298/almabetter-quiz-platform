@@ -53,9 +53,11 @@ const SelectQuizType = () => {
                                     boxShadow: "2px 2px 4px #F4E3FF",
                                     marginBottom: "6px",
                                     padding: "0 0 0 0px",
-                                    width: "70%"
+                                    width: "70%",
+                                    opacity:".8",
+                                    borderRadius:"20px",
                                 }}>
-                                MCQ(Single Correct)
+                                MCQ (Single Correct)
                             </Button>
                         </DialogActions>
                     </Dialog>
