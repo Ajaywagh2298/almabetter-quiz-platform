@@ -118,31 +118,45 @@ const CreateQuizPage = () => {
       }
     };
     
-  const onSaveHandler = (event) => {     // this function will run when saveButton is clicked
-event.preventDefault();
+    const onSaveHandler = (event) => {
+      event.preventDefault();
     
-    if (titleRef.current.value === "" || descriptionRef.current.value === "") {
-      return alert("Enter title and description");
-    }
-    if(question.length === 0){
-      return alert("Add questions!")
-    }
+      if (titleRef.current.value === "" || descriptionRef.current.value === "") {
+        return alert("Enter title and description of the quiz!");
+      }
+      if (question.length === 0) {
+        return alert("Add question!");
+      }
     
-    const Quiz = {
-      description: descriptionRef.current.value,
-      questions: question,
-      title: titleRef.current.value,
-      id: Math.random(),
-      createdOn: new Date(),
-      isActive: true,
-    };
+      const Quiz = {
+        description: descriptionRef.current.value,
+        questions: question,
+        title: titleRef.current.value,
+        id: Math.random(),
+        createdOn: new Date(),
+        isActive: true,
+      };
+    
+      const confirmPopup = window.confirm("Quiz saved successfully! What would you like to start playing?");
+      
+      if (confirmPopup) {
+        // User chose to navigate to "Play Quiz" page
+        dispatch(addQuiz(Quiz));
+        setCount(1);
+        titleRef.current.value = "";
+        descriptionRef.current.value = "";
+        navigate("/play-quiz");
+      } else {
+        // User chose to close the pop-up
+        dispatch(addQuiz(Quiz));
+        setCount(1);
+        titleRef.current.value = "";
+        descriptionRef.current.value = "";
 
-    dispatch(addQuiz(Quiz));
-    setCount(1);
-    titleRef.current.value = "";
-    descriptionRef.current.value = "";
-    navigate("/play-quiz")
-  };
+        //This will redirect the page to create page again(change the code after geting my quiz code)
+        navigate("/create-new");
+              }
+    };
 
   const deleteHandler = (id) => {     // this function will run when delete button inside options is clicked and return the new filtered array
     const newAnswers = answers.filter((el) => el.id !== id);   
