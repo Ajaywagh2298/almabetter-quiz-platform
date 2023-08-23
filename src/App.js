@@ -4,18 +4,22 @@ import Home from "./Pages/Home/HomePage";
 import NavbarComponent from "./Pages/Component/Navbar/NavbarComponent";
 import PlayQuizPage from "./Pages/Quiz/playQuizPage";
 import SelectQuizType from "./Pages/Quiz/selectQuizType";
+import Error from "./Pages/Error/ErrorPage";
+import QuizCard from "./Pages/Component/Quiz/QuizCard";
 
 function App() {
-  return (
-      <div  >
-          <NavbarComponent/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-            <Route path="/play-quiz" element={<PlayQuizPage/>} />
-          <Route path='/create-new' element={<SelectQuizType/>}/>
-        </Routes>
-      </div>
-  );
+    return (
+        <div>
+            <NavbarComponent/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/play-quiz" element={<PlayQuizPage/>}/>
+                <Route path='/create-new' element={<SelectQuizType/>}/>
+                <Route path='/quiz-run' element={<QuizCard/>} />
+                <Route path="*" element={<Error/>}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
