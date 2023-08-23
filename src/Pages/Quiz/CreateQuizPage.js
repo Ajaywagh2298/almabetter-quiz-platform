@@ -5,6 +5,7 @@ import {addQuiz} from '../../ReduxController/Actions/ActionsScript';
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
 import "../CSS/CreateQuizPage.css";
+import Container from '@mui/material/Container';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 
 /*created React functional component named CreateQuizPage*/
@@ -117,31 +118,45 @@ const CreateQuizPage = () => {
       }
     };
     
-  const onSaveHandler = (event) => {     // this function will run when saveButton is clicked
-event.preventDefault();
+    const onSaveHandler = (event) => {
+      event.preventDefault();
     
-    if (titleRef.current.value === "" || descriptionRef.current.value === "") {
-      return alert("Enter title and description");
-    }
-    if(question.length === 0){
-      return alert("Add questions!")
-    }
+      if (titleRef.current.value === "" || descriptionRef.current.value === "") {
+        return alert("Enter title and description of the quiz!");
+      }
+      if (question.length === 0) {
+        return alert("Add question!");
+      }
     
-    const Quiz = {
-      description: descriptionRef.current.value,
-      questions: question,
-      title: titleRef.current.value,
-      id: Math.random(),
-      createdOn: new Date(),
-      isActive: true,
-    };
+      const Quiz = {
+        description: descriptionRef.current.value,
+        questions: question,
+        title: titleRef.current.value,
+        id: Math.random(),
+        createdOn: new Date(),
+        isActive: true,
+      };
+    
+      const confirmPopup = window.confirm(`Quiz saved successfully!\n\nClick on OK to play the quiz!\nCancel it to view the quiz!`);
+      
+      if (confirmPopup) {
+        // User chose to navigate to "Play Quiz" page
+        dispatch(addQuiz(Quiz));
+        setCount(1);
+        titleRef.current.value = "";
+        descriptionRef.current.value = "";
+        navigate("/play-quiz");
+      } else {
+        // User chose to close the pop-up
+        dispatch(addQuiz(Quiz));
+        setCount(1);
+        titleRef.current.value = "";
+        descriptionRef.current.value = "";
 
-    dispatch(addQuiz(Quiz));
-    setCount(1);
-    titleRef.current.value = "";
-    descriptionRef.current.value = "";
-    navigate("/play-quiz")
-  };
+        //This will redirect the page to create page again(change the code after geting my quiz code)
+        navigate("/create-new");
+              }
+    };
 
   const deleteHandler = (id) => {     // this function will run when delete button inside options is clicked and return the new filtered array
     const newAnswers = answers.filter((el) => el.id !== id);   
@@ -158,6 +173,7 @@ event.preventDefault();
           <form action="" onSubmit={onSaveHandler}>
             <div className="upper">
                 {/*input for Title*/}
+                <Container maxWidth="" className="formContainer">
               <input
                 type="text"
                 placeholder="Add Title"
@@ -177,12 +193,16 @@ event.preventDefault();
                 required
                 ref={descriptionRef}
                 variant="outlined"
-              />                          
+              />    
+              </Container>                      
             </div>
-           <hr/>
-           <h4>ADD QUIZ QUESTIONS</h4>
+            
+          
+           <h4>ADD QUIZ QUESTIONS</h4><br/>
+           <div className="lower">
+           <Container maxWidth="" className="formContainer">
             <div className="QA">
-              <label htmlFor="question">Question {count}:-</label><br/><br/>
+              <label htmlFor="question">QUESTION {count}.</label><br/><br/>
               <input
                 type="text "
                 className="question"
@@ -207,18 +227,19 @@ event.preventDefault();
               />
 
               {/*check box for selecting correct answer */}
-              <div className="checkBox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+              <div className="checkBox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+      
               <input
                   type="checkbox"
                   id="check"
                   name="correct"
                   ref={CorrectAnswerRef}
-                style={{marginRight:"10px",border:"none"}}
-                variant="outlined"
+                style={{marginRight:"10px",border:"none",}}
+                variant="outlined "
                 />  
-                <h3 style={{color:"#DC7633"}}>Correct</h3>
+                <h4 style={{color:"#33CC99", marginTop:"10px"}}>CORRECT</h4>
                 <Button sx={{marginLeft:"10px",cursor:"pointer"}}  onClick={addOptionHandler}>
-                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#DC7633"}}/>
+                <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#33CC99"}}/>
                 </Button>
               </div>
             </div>
@@ -229,8 +250,8 @@ event.preventDefault();
                     className="option" key={i}
                     style={
                       el.correct
-                        ? { background: "#32a84e" }
-                        : { background: "#DC7633" }   
+                        ? { background: "#32a84e",color:"white",width:"45%" }
+                        : { background: "#4B3621", color:"white",width:"45%" }   
                       } //if correct is checked then show the option's bakcground as green color else grey.
                       
                   >
@@ -238,19 +259,26 @@ event.preventDefault();
                     <Button
                       size="small"
                       onClick={() => deleteHandler(el.id)}
-                      sx={{ height: "50%", color: "black" }}
+                      sx={{ height: "50%", color: "white" }}
                     >
                       <DeleteIcon />
                     </Button>
                   </div>
                 );
               })}
-            </div>
+            </div><br/>
             <div className="questionBtn">
-              <Button  onClick={addQuestionHandler}>Add Question </Button>
+              <Button variant="contained #33CC99" onClick={addQuestionHandler}>
+      
+
+                ADD QUESTION 
+                
+                </Button>
             </div>
-            <hr/>
-               <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="outlined"/>
+          </Container>
+          </div>
+            
+               <input style={{cursor:"pointer"}} id="submitBtn" type="submit" value="Submit" variant="contained"/>
           </form>
         </div>
       </div>
