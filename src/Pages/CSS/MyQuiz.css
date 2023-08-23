@@ -1,102 +1,140 @@
-.head{
+body {
+    font-family: "lato", sans-serif;
+}
+.whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-class {
+    border-radius: 20px;
+    width: 50%;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+}
+.my-title {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #273746;
+}
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    word-spacing: 2px;
+}
+.col-4 {
+    width: 50vh;
+}
+.responsive-table .table-header {
+    background-color: #2C3E50;
+    color: #d1d1d1;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Poppins",sans-serif;
-    color: #1ABC9C;
-    border-radius: 30%;
-}
-
-.table{
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    outline: none;
-    font-family: "poppins",sans-serif;
-
-}
-
-.tre{
-    display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 2px 0;
-  width: 95vw;
-  }
-  
-.ti{
-    text-align: right;
-    overflow-Wrap:"break-word";
-
-    width:10vw
-}
-
-.deleteModal{
-    border:none;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 8px #808B96;
     border-radius: 10px;
+    border: none;
+    z-index: 20;
+}
+.responsive-table .table-row {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 26vw;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: rgb(215, 215, 215);
-
-}
-.deleteouter{
-display: flex;
-justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 8px #D5DBDB;
+    color: #2E4053;
+    border-radius: 10px;
+    border: none;
+    z-index: 20;
 }
 
-.delbtn{
+.deleteouter {
     display: flex;
-    justify-content: flex-end;
-    width: 26vw;
-}
-
-@media screen and (max-width:750px) {
-    .tableHead{
-        display: none;
-    }
-    .table{
-        border:none;
-    }
-    .ti{
-        text-align: left;
-        width:15vw;
-           }
-         
-}
-.switch{
-    padding: 10px 5px;
-    font-size: 15px;
-    text-align: center;
-  width:90px;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
- /** box-shadow: 0 5px #999;**/
-}
-.switch:active {
-  
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
-  }
-
-  .tableHead{
-    border-bottom: 1px solid grey;
-    padding-bottom: 10px;
-  }
-
-  .question-found {
-    width: 700px;
-    height: 400px;
-}
-
-.all-quiz-container{
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70vh;
+    height: 20vh;
+    word-spacing: 2px;
+    box-shadow: 1px 1px 9px #808B96;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+.delete-btn-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+}
+.content {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 5px;
+    word-spacing: 2px;
+    border-radius: 20px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 1%;
+    margin: 3%;
+}
+
+.title-para {
+    font-size: 28px;
+}
+.war-btn {
+    border-radius: 10px;
+    width: 100px;
+    display: flex;
+    height: 30px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: none;
+    padding-top: 3px;
 }

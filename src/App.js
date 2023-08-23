@@ -6,7 +6,7 @@ import PlayQuizPage from "./Pages/Quiz/playQuizPage";
 import SelectQuizType from "./Pages/Quiz/selectQuizType";
 import Error from "./Pages/Error/ErrorPage";
 import QuizCard from "./Pages/Component/Quiz/QuizCard";
-import MyQuiz from './Pages/Quiz/myQuizPage';
+import MyQuiz from "./Pages/Quiz/myQuizPage";
 
 function App() {
     return (
@@ -23,5 +23,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
