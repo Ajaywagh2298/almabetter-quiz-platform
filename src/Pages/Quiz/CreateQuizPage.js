@@ -173,7 +173,7 @@ const CreateQuizPage = () => {
           <form action="" onSubmit={onSaveHandler}>
             <div className="upper">
                 {/*input for Title*/}
-                <Container maxWidth="" className="formContainer">
+                <Container maxWidth="lg" className="formContainer">
               <input
                 type="text"
                 placeholder="Add Title"
@@ -247,7 +247,7 @@ const CreateQuizPage = () => {
               {answers.map((el,i) => {        //Mapped the element of array "answers"
                 return (
                   <div
-                    className="option" key={i}
+                    className="optionlist" key={i}
                     style={
                       el.correct
                         ? { background: "#32a84e",color:"white",width:"45%" }
@@ -266,7 +266,7 @@ const CreateQuizPage = () => {
                   </div>
                 );
               })}
-            </div><br/>
+            </div>
             <div className="questionBtn">
               <Button variant="contained #33CC99" onClick={addQuestionHandler}>
       
