@@ -1,0 +1,230 @@
+/*styling for the CreateQuizPage */
+
+.heading{
+    display: flex;
+    justify-content: center;
+    font-family: Poppins,sans-serif;
+    color:#4B3621;
+    padding-top: 2px;
+    opacity: 1;
+    
+    }
+
+    h4{
+        display: flex;
+        justify-content: center;
+        font-family: Poppins,sans-serif;
+        color:#4B3621;
+        padding-top: 2px;
+        opacity: .8;
+        
+        }
+
+.quizForm{
+    display: flex;
+    font-family: Poppins,sans-serif;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width:80%;
+    height:100%;
+    padding: 30px 30px;
+    
+    box-shadow:2px 2px 5px #4B3621;
+}
+
+.outline{
+    display: flex;
+  justify-content: center;
+ 
+  
+}
+
+.upper{
+    display: flex;
+    flex-direction: column;
+}
+
+.lower{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-bottom: 20px;
+    height: 30px;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 5px;
+    border:1px solid #4B3621;
+    text-align: center;
+    opacity: .8;
+}
+.description{
+    height: 60px;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 5px;
+    border:1px solid #4B3621;
+    text-align: center;
+    opacity: .8;
+}
+
+label{
+margin-top: 50px;
+margin-bottom: 20px;
+font-size: large;
+font-weight: bold;
+margin-left: 42%;
+color:#33CC99;
+opacity: .8;
+
+}
+.question{
+    width:80%;
+    height:30px;
+    margin-left: 9%;
+    border:1px solid #4B3621;
+    border-radius: 5px;
+    text-align: center;
+    opacity: .8;
+}
+
+.answerSection{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.checkBox{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    width:150px;
+    opacity: .8;
+    color: #4B3621;
+    }
+
+    .viewAnswer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:20px;
+        flex-wrap: wrap;
+        display: center;
+    
+    }
+  
+    .option, .optionlist{
+        justify-content: space-between;
+        display: flex;
+        border-radius: 5px;
+        padding-left: 5px;
+        text-align: center;
+        margin:5px;
+        align-items: center;
+        width:150px;
+        border:1px solid #4B3621;
+        text-align: center;
+        display: center;
+      
+    }
+
+    .questionBtn{
+        width: 18%;
+        margin: 0 auto;
+        border-radius: 10px;
+        text-align: center;
+        color:white;
+        opacity: 1;
+        background-color: #33CC99;
+        
+        
+        
+    }
+    
+
+    .formContainer{
+        padding:50px;
+        border-radius:20px;
+        margin-bottom: 35px;
+        box-shadow:2px 2px 5px #484545;
+       
+    }
+
+    #submitBtn{
+        color: white;
+        border-radius: 10px;
+        width:100px;
+        height:40px;
+        font-weight: bold;
+        float: right;
+        font-size: larger;
+        background-color: #4B3621;
+        opacity: .8;
+    }
+
+  /*media query for smaller screen*/
+
+  @media (min-width: 768.1px) and (max-width: 1200px){
+    .questionBtn {
+        width: 20vw; 
+        margin: 0 auto;
+        
+      }
+      label{
+        margin-left: 40%;
+     }
+
+  }
+
+  
+@media (max-width: 768px) {
+    .quizForm {
+      width: 90%; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .title,
+    .description,
+    .question{
+      width: 80%; 
+      margin-left: 10%; 
+    }
+    label{
+        margin-left: 35%;
+     
+}
+    
+    .answerSection {
+      flex-direction: column; 
+      
+    }
+    
+    .checkBox {
+      flex-direction: column; 
+      margin: 0 auto;
+    }
+    
+    .option {
+      width: 40%; 
+      margin:0 auto;
+      height:6.5vh;
+    }
+    
+
+    
+    .questionBtn {
+      width: 29vw; 
+      margin: 0 auto;
+      
+    }
+    
+    #submitBtn {
+      width: 80px; 
+    
+  }
+}
