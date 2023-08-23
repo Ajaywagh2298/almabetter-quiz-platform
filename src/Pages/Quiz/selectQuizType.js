@@ -37,7 +37,8 @@ const SelectQuizType = () => {
                                 outline: "none",
                                 borderRadius: "10px",
                                 boxShadow: "2px 2px 4px white",
-                                width: "35%",
+                                width: "80vw",
+                                maxWidth: "400px",
                             },
                         }}
                     >

@@ -117,7 +117,7 @@ opacity: .8;
     
     }
   
-    .option{
+    .option, .optionlist{
         justify-content: space-between;
         display: flex;
         border-radius: 5px;
@@ -165,3 +165,66 @@ opacity: .8;
         background-color: #4B3621;
         opacity: .8;
     }
+
+  /*media query for smaller screen*/
+
+  @media (min-width: 768.1px) and (max-width: 1200px){
+    .questionBtn {
+        width: 20vw; 
+        margin: 0 auto;
+        
+      }
+      label{
+        margin-left: 40%;
+     }
+
+  }
+
+  
+@media (max-width: 768px) {
+    .quizForm {
+      width: 90%; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .title,
+    .description,
+    .question{
+      width: 80%; 
+      margin-left: 10%; 
+    }
+    label{
+        margin-left: 35%;
+     
+}
+    
+    .answerSection {
+      flex-direction: column; 
+      
+    }
+    
+    .checkBox {
+      flex-direction: column; 
+      margin: 0 auto;
+    }
+    
+    .option {
+      width: 40%; 
+      margin:0 auto;
+      height:6.5vh;
+    }
+    
+
+    
+    .questionBtn {
+      width: 29vw; 
+      margin: 0 auto;
+      
+    }
+    
+    #submitBtn {
+      width: 80px; 
+    
+  }
+}
