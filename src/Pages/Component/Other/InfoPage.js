@@ -1,8 +1,7 @@
 
-import "../../CSS/other.css"
-import boy from '../../Image/happy-boy.png'
-import CrazyGirl from '../../Image/crazy-girl.png'
-import dashingGirl from '../../Image/dashing-gir.png';
+import "../../CSS/other.css";
+import boy from '../../Image/happy-boy.png';
+import CrazyGirl from '../../Image/crazy-girl.png';
 import glassGirl from '../../Image/glass-girl.png';
 import glassMan from '../../Image/glass-man.png';
 import happyBoy from '../../Image/happy-boy.png';
@@ -15,38 +14,38 @@ const InfoPage = () => {
             <div className={'info-body'}>
                 <div className={'right-animation'}>
                     <div className={'info-body-img'}>
-                        <img src={boy}  className={'avator'}/>
+                        <img src={boy}  className={'avator'} alt={'#'}/>
                     </div>
                     <div className={'right-body-text'}>" Engaging quizzes that make learning fun and interactive! "    -  S.OP.DUMMY</div>
                 </div>
                 <div className={'left-animation'} style={{float:'right'}}>
                     <div className={'right-body-text'}>"Addictively fun quizzes that make learning feel like a game!"</div>
                     <div className={'info-body-img'}>
-                        <img src={CrazyGirl}  className={'avator'}/>
+                        <img src={CrazyGirl}  className={'avator'} alt={"#"}/>
                     </div>
                 </div>
                 <div className={'right-animation'}>
                     <div className={'info-body-img'}>
-                        <img src={glassMan}  className={'avator'}/>
+                        <img src={glassMan}  className={'avator'} alt={'#'}/>
                     </div>
                     <div className={'right-body-text'}>"Addictive quizzes that make learning feel like a game!"</div>
                 </div>
                 <div className={'left-animation'} style={{float:'right'}}>
                     <div className={'right-body-text'}>"Addictive quizzes that make learning fun!"</div>
                     <div className={'info-body-img'}>
-                        <img src={collegeTeacher}  className={'avator'}/>
+                        <img src={collegeTeacher}  className={'avator'} alt={'#'}/>
                     </div>
                 </div>
                 <div className={'right-animation'}>
                     <div className={'info-body-img'}>
-                        <img src={happyBoy}  className={'avator'}/>
+                        <img src={happyBoy}  className={'avator'} alt={'#'}/>
                     </div>
                     <div className={'right-body-text'}>"Addictive quizzes, can't stop playing!"</div>
                 </div>
                 <div className={'left-animation'} style={{float:'right'}}>
                     <div className={'right-body-text'}>"Addictive quizzes, a great way to learn while having fun!"</div>
                     <div className={'info-body-img'}>
-                        <img src={glassGirl}  className={'avator'}/>
+                        <img src={glassGirl}  className={'avator'} alt={'#'}/>
                     </div>
                 </div>
             </div>

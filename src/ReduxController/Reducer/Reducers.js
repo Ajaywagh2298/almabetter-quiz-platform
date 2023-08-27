@@ -8,7 +8,7 @@ const initialState = {
     answers: [],
 };
 
-// the reducer containes all the necessary functions in order to update our state accordingly //
+// the reducer contains all the necessary functions in order to update our state accordingly //
 
 const reducer = (state = initialState, actions) => {
     if (actions.type === ACTIONTYPE.ADDQUIZ) {
@@ -70,7 +70,7 @@ const reducer = (state = initialState, actions) => {
             ...state,
             name: "",
             playQuiz: [],
-            answers: [],
+            answers: []
         };
     }
 
