@@ -1,61 +1,88 @@
 .result-container {
     justify-content: center;
     text-align: center;
-    margin-top: 10%;
     position: relative;
     border: none;
     border-radius: 20px;
     height: 70vh;
-    width: 200vh;
+    width: 250vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    margin-top: 5%;
 }
-.result-heading {
-    padding: 2%;
-}
-.result-heading-text {
-    font-size: 27px;
+.result-header {
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border: none;
+    font-size: 4vh;
+    color: #283747;
+    flex-direction: column;
     font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    color: #138D75;
     font-weight: bold;
+    margin-top: 2%;
+}
+.outer-border {
+    width: 800px;
+    height: 650px;
+    padding: 20px;
+    text-align: center;
+    border: 6px solid #F1C40F;
+    border-radius: 10px;
 }
 
-.small-text {
-    font-weight: bold;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+.inner-dotted-border {
+    width: 750px;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #D35400;
+    border-style: dotted;
 }
+
+.body-text {
+    font-size: 20px;
+    font-family: Cantarella, serif;
+    color: #283747;
+    margin: 10px;
+}
+
 .player-name {
-    font-size: 10vh;
-    font-family: "Poppins", sans-serif;
+    font-size: 7vh;
+    font-family: Cantarella, serif;
+    color: #EC7063;
+    margin: 2%;
     text-transform: uppercase;
-    color: #F5B041;
-    margin-bottom: 14px;
 }
 
-.info-text{
-    font-size: 22px;
-    font-family: Cantarell;
-    margin-bottom: 8px;
-    word-break: break-all;
+.quiz-title-1 {
+    font-size: 4vh;
+    font-family: Cantarella, serif;
+    color: #283747;
+    margin: 2%;
 }
-.issued-name{
+.result-footer {
+    position: relative;
+    border: none;
     flex-direction: row;
-    display: flex;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #138D75;
-}
-.date {
-    font-size: 15px;
     font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-    width: 300px;
-
+    margin: 10%;
+}
+.footer-text {
+    font-size: 2vh;
+    font-family: Cantarella, serif;
+    color: #283747;
+    justify-content: left;
+    text-align: left;
+    padding-top: 2%;
+    align-items: center;
+}
+.footer-text-2 {
+    font-size: 2vh;
+    font-family: Cantarella, serif;
+    color: #283747;
+    justify-content: right;
+    text-align: right;
 }

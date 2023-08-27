@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
 import {resetQuiz} from "../../ReduxController/Actions/ActionsScript";
 import "../CSS/ResultPage.css"
-
+import MilitaryTechSharpIcon from '@mui/icons-material/MilitaryTechSharp';
 function ResultPage(props) {
     const results = useSelector((state) => state.reducer.answers); //retrieving the array of selected answers
     const mapped = results.map((el) => el.isCorrect); //array of isCorrect values(either true or false)
@@ -17,37 +17,59 @@ function ResultPage(props) {
         disptach(resetQuiz());
         navigate("/");
     };
+    setTimeout(() => {
+        resetQuizHandler();
+    }   , 5000);
     return (
         <div>
             <div className="result-container">
-                <div className="result-heading">
-                    <p className={'result-heading-text'}>Certificate Of Completion</p>
-                </div>
-                <div className="result-body">
-                    <p className={'small-text'}>This is Awarded to</p>
-                    <p className={'player-name'}>{props.name}</p>
-                    <p className={'info-text'}>
-                        For Successfully Completing the Quiz
-                    </p>
-                    <p>{props.title}</p>
-                    <p className={'info-text'}>
-                        With a Score of {mapped.filter((el) => el === true).length} out
-                        of {mapped.length} with {mapped.filter((el) => el === true).length / mapped.length * 100}%
-                        accuracy
-                    </p>
-                    <div className={'issued-name'}>
-                        <p className={'date'}>
-                            Date : {new Date().toDateString()}
-                        </p>
-                        <p >
-                            Issued By : ALMA BETTER
-                        </p>
+                <div className="outer-border">
+                    <div className="inner-dotted-border">
+                        <div className={'result-header'}>
+                            <MilitaryTechSharpIcon style={{fontSize:'70px',color:'#EC7063'}}/>
+                            <p>
+                                Certificate of Completion
+                            </p>
+                        </div>
+                        <div>
+                            <div className={'result-body'}>
+                                <div >
+                                    <p className={'body-text'}>
+                                        This Is To Certify That
+                                    </p>
+                                    <p className={'player-name'}>
+                                        {props.name}
+                                    </p>
+                                    <p className={'body-text'} style={{margin:'2%'}}>
+                                        Has Successfully Completed The Quiz.
+                                    </p>
+                                    <p className={'quiz-title-1'}>
+                                       " {props.title} "
+                                    </p>
+                                    <p className={'body-text'}>
+                                        With Score Of {mapped.filter((el) => el === true).length} Out Of {mapped.length}
+                                        with {mapped.filter((el) => el === true).length / mapped.length * 100}%
+                                        Accuracy.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={'result-footer'}>
+                                <p className={'footer-text'}>
+                                    Date: {new Date().toLocaleDateString()}
+                                </p>
+                                <p className={'footer-text-2'}>
+                                    <span style={{fontSize:'16px',fontFamily:'monospace'}}>
+                                        ALMA-BEETER QUIZ APP
+                                    </span> <br/>
+                                    Signature
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     );
-
 }
 
 export default ResultPage;
