@@ -7,7 +7,8 @@ import { Button } from "@mui/material";
 import "../CSS/CreateQuizPage.css";
 import Container from '@mui/material/Container';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
-
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 /*created React functional component named CreateQuizPage*/
 const CreateQuizPage = () => {
 
@@ -164,7 +165,14 @@ const CreateQuizPage = () => {
   };
 
   return (
-    <>
+    <> <div style={{display:'flex',justifyContent:'right'}}>
+      { added &&
+          <div style={{margin:'10px',height:'60px',width:'200px',justifyContent:'center',alignItems:'center',textAlign:'center',display:'flex',flexDirection:'row'}}>
+            <CheckCircleIcon style={{color:'#33CC99',fontSize:'3vh',marginRight:'1%'}}/>
+            <span style={{color:'#33CC99',fontSize:'2.0vh'}}>Question Added SuccessFully!</span>
+          </div>
+      } {/*if added is true show <p>Your question is added!</p>*/}
+    </div>
       <div className="heading">
         <h1>CREATE NEW QUIZ</h1>
       </div>
@@ -209,10 +217,7 @@ const CreateQuizPage = () => {
                 placeholder="Enter your question "
                  maxLength={200}
                 ref={questionRef}
-                
               />
-              {added && <p> Your question is added! </p>}{/*if added is true show <p>Your question is added!</p>*/}
-              {answerDone && <p>Add atleast 2 options!</p>}    {/*if answerDone is true show <p>Add atleast 2 answers!</p>*/} 
             </div>     
 
             <div className="answerSection">
@@ -224,25 +229,41 @@ const CreateQuizPage = () => {
                 placeholder="Enter options "
                 ref={answerRef}
                 variant="outlined"
+                style={{outline:"none", height:'40px',border : '2px solid #95A5A6',fontSize: '14px'}}
               />
 
               {/*check box for selecting correct answer */}
-              <div className="checkBox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+              <div className="checkBox-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       
               <input
                   type="checkbox"
-                  id="check"
+                  id="cbx"
                   name="correct"
+                  className={'checkbox'}
                   ref={CorrectAnswerRef}
-                style={{marginRight:"10px",border:"none",}}
-                variant="outlined "
-                />  
-                <h4 style={{color:"#33CC99", marginTop:"10px"}}>CORRECT</h4>
-                <Button sx={{marginLeft:"10px",cursor:"pointer"}}  onClick={addOptionHandler}>
+                  style={{marginRight:"2%",border:"none", display: "none"}}
+                  variant="outlined "
+                />
+                <label htmlFor="cbx" className="check">
+                  <svg width="18px" height="18px" viewBox="0 0 18 18">
+                    <path
+                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                    <polyline points="1 9 7 14 15 4"></polyline>
+                  </svg>
+                </label>
+
+                <h4 style={{color:"#33CC99",marginLeft:'10px'}}>CORRECT</h4>
+                <Button sx={{cursor:"pointer"}}  onClick={addOptionHandler}>
                 <AddCircleOutlineOutlinedIcon fontSize="large" variant="contained" style={{color:"#33CC99"}}/>
                 </Button>
               </div>
             </div>
+             { answerDone &&
+                 <div style={{margin:'10px',height:'60px',width:'300px',justifyContent:'center',alignItems:'center',textAlign:'center',display:'flex',flexDirection:'row'}}>
+                   <ReportGmailerrorredIcon style={{color:'#E67E22',fontSize:'3vh',marginRight:'1%'}}/>
+                   <span style={{color:'#E67E22',fontSize:'2.0vh'}}>Add at Least 2 Options!</span>
+                 </div>
+             }    {/*if answerDone is true show <p>Add at least 2 answers!</p>*/}
             <div className="viewAnswer">
               {answers.map((el,i) => {        //Mapped the element of array "answers"
                 return (
@@ -250,16 +271,19 @@ const CreateQuizPage = () => {
                     className="optionlist" key={i}
                     style={
                       el.correct
-                        ? { background: "#32a84e",color:"white",width:"45%" }
-                        : { background: "#4B3621", color:"white",width:"45%" }   
-                      } //if correct is checked then show the option's bakcground as green color else grey.
+                        ? { background: "#2ECC71",color:"white",width:"45%",height:'40px', border:"none" }
+                        : { background: "white", color:"#282c34",width:"45%" ,height:'40px',border : '2px solid #5DADE1' }
+                      } //if correct is checked then show the option's  green otherwise show white
                       
                   >
                     <p style={{overflowWrap:"break-word", width:"100px"}}>{el.answer} </p>
                     <Button
                       size="small"
                       onClick={() => deleteHandler(el.id)}
-                      sx={{ height: "50%", color: "white" }}
+                      sx={{ height: "50%" }}
+                      style={
+                      el.correct ? { color :'white'} : { color :'#34495E'}
+                      }
                     >
                       <DeleteIcon />
                     </Button>
