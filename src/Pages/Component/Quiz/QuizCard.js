@@ -1,11 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAnswer } from "../../../ReduxController/Actions/ActionsScript";
-import { useState } from "react";
-import { Button } from "@mui/material";
+import {useDispatch, useSelector} from "react-redux";
+import {getAnswer} from "../../../ReduxController/Actions/ActionsScript";
+import {useState} from "react";
 import ResultPage from "../../Quiz/ResultPage";
 import "../../CSS/QuizCard.css";
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
 const QuizCard = () => {
     const [count, setcount] = useState(0); // count for question number.
     const [showModal, setshowModal] = useState(false); //for showing result if showModal is true
@@ -18,10 +18,10 @@ const QuizCard = () => {
     const dispatch = useDispatch(); //for dispatching action
 
     const question = quiz[count].question; //questions of the selected quiz
-    const answers = quiz[count].answers; //answers of the selected quizz's question
+    const answers = quiz[count].answers; //answers of the selected quiz's question
 
 
-    //nexQuestionHAndler fucntion will run when next question button is clicked
+    //nexQuestionHAndler function will run when next question button is clicked
     const nextQuestionHandler = () => {
         dispatch(getAnswer(finalAnswer));
         setDisable(true);
@@ -51,13 +51,10 @@ const QuizCard = () => {
     };
 
 
-
     return (
-        <div
-            className="outer"
-        >
+        <div className="outer">
             {showModal ? (
-                <ResultPage name={name} />
+                <ResultPage name={name} title={title}/>
             ) : (
                 <div id="container">
                     <div>
@@ -82,7 +79,6 @@ const QuizCard = () => {
                     >
 
                         {answers.map((el, i) => (
-                            // Check if i is even or odd to decide on row placement
                             (i % 2 === 0) ? (
                                 <div className="quiz-options-row" key={i} style={{
                                     height: "80px",
@@ -144,7 +140,7 @@ const QuizCard = () => {
                         <div className={'question-list'}>
                             <h3>
                                 {" "}
-                                Question  {count + 1} / {quiz.length}
+                                Question {count + 1} / {quiz.length}
                             </h3>
                         </div>
                         <div className="next-question">
@@ -152,14 +148,14 @@ const QuizCard = () => {
                                 <button
                                     className={"next-button"}
                                     disabled
-                                > <span className={'btn-name'}> Next Question </span> <ArrowCircleRightIcon/>
+                                ><span className={'btn-name'}> Next Question </span> <ArrowCircleRightIcon/>
                                 </button>
                             ) : (
                                 <button
                                     className={"next-button"}
                                     onClick={nextQuestionHandler}
                                 >
-                                    <span className={'btn-name'} > Next Question </span> <ArrowCircleRightIcon/>
+                                    <span className={'btn-name'}> Next Question </span> <ArrowCircleRightIcon/>
                                 </button>
                             )}
                         </div>

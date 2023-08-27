@@ -4,9 +4,6 @@ import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { getName, playQuiz } from '../../ReduxController/Actions/ActionsScript';
 import { useNavigate } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import {Dialog} from '@mui/material';
 import {Alert,AlertTitle} from '@mui/material';
 import "../CSS/PlayQuiz.css"
@@ -42,7 +39,10 @@ const PlayQuizPage = () => {
         <div style={{marginTop:"100px"}} >
             <div className="mainContainer">
                 <Dialog open={showAlert} sx={{padding:'10px'}}>
-                    <Alert severity="info" className={'quiz-info'} ><AlertTitle style={{color:'#3498DB',margin:'5px'}}>Info</AlertTitle> <p >Enter your name and select the quiz you want to play.</p> </Alert>
+                    <Alert severity="info" className={'quiz-info'} style={{margin:'10px'}}>
+                        <AlertTitle style={{color:'#3498DB',margin:'5px'}}>Info</AlertTitle>
+                        <p >Enter your name and select the quiz you want to play.</p>
+                    </Alert>
                 </Dialog>
                 <div className="heading" sx={{marginBottom:'2%'}}>
                     <h1 >PLAY QUIZ</h1>
