@@ -1,41 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-.mainContainer{
+.mainContainer {
     display: flex;
     background-position: center;
     flex-direction: column;
     padding: 30px;
     margin: 50px;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
 }
-.quiz-description{
+
+.quiz-description {
     margin-bottom: 5%;
 }
+
 .quiz-info {
     margin-top: 2%;
     color: #283747;
     font-size: 18px;
 }
+
 .quiz-info:after {
-  display: none;
+    display: none;
 }
-.input-name{
+
+.input-name {
     margin-bottom: 9%;
 }
+
 .question-found {
-    width: 700px;
-    height: 400px;
+    width: 100%; /* Adjust the width as needed for small screens */
+    max-width: 700px; /* Add a maximum width for larger screens */
+    height: auto; /* Adjust the height as needed */
 }
+
 .user-name {
-    width: 330px;
+    width: 100%; /* Adjust the width as needed for small screens */
+    max-width: 330px; /* Add a maximum width for larger screens */
     border-radius: 10px;
     margin-top: 5%;
     height: 50px;
@@ -57,9 +65,34 @@
 .user-name:hover {
     box-shadow: inset 1px 2px 8px #525865;
 }
-@media screen and (max-width:750px) {
-    .mainContainer{
-        margin:10px;
+
+@media screen and (max-width: 768.1px) and (max-width: 1200px) {
+    .mainContainer {
+        margin: 10px; /* Adjust the margin as needed */
+    }
+
+    .question-found {
+        max-width: 100%; /* Adjust the maximum width for small screens */
+        height: auto; /* Adjust the height as needed */
+    }
+
+    .user-name {
+        max-width: 100%; /* Adjust the maximum width for small screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        margin: 10px; /* Adjust the margin as needed */
+    }
+
+    .question-found {
+        max-width: 100%; /* Adjust the maximum width for small screens */
+        height: auto; /* Adjust the height as needed */
+    }
+
+    .user-name {
+        max-width: 100%; /* Adjust the maximum width for small screens */
     }
 }
 
@@ -72,7 +105,7 @@
     }
 }
 
-#InfoBanner{
+#InfoBanner {
     margin-bottom: 10px;
     position: absolute;
     left: -15px;

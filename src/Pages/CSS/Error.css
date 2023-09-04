@@ -68,3 +68,91 @@
     border-radius: 50px;
     box-shadow: 1px 3px 3px 1px #AEB6BF;
 }
+
+/* Styles for screen widths between 768.1px and 1200px */
+@media (min-width: 768.1px) and (max-width: 1200px) {
+    .top-box {
+        margin-top: 5%; /* Adjust the margin-top value as needed */
+    }
+
+    .main-box {
+        height: 40vh; /* Adjust the height as needed */
+        background-size: 60%; /* Adjust the background size as needed */
+    }
+
+    .vertical-line {
+        height: 35px; /* Adjust the height as needed */
+        margin-left: 5px; /* Adjust the margin-left value as needed */
+        margin-right: 5px; /* Adjust the margin-right value as needed */
+    }
+
+    .status-code {
+        font-size: 30px; /* Adjust the font size as needed */
+        margin-top: 10px; /* Adjust the margin-top value as needed */
+    }
+
+    .error-message {
+        font-size: 16px; /* Adjust the font size as needed */
+    }
+
+    .bottom-box {
+        margin-bottom: 5%; /* Adjust the margin-bottom value as needed */
+        margin-left: 25%; /* Adjust the margin-left value as needed */
+    }
+
+    .message {
+        font-size: 15px; /* Adjust the font size as needed */
+    }
+
+    .return-button {
+        width: 120px; /* Adjust the button width as needed */
+        height: 35px; /* Adjust the button height as needed */
+        font-size: 12px; /* Adjust the font size as needed */
+        margin-top: 10px; /* Adjust the margin-top value as needed */
+        margin-left: 5px; /* Adjust the margin-left value as needed */
+    }
+}
+
+/* Styles for screen widths equal to or greater than 768px (including 768px) */
+@media (max-width: 768px) {
+    .top-box {
+        margin-top: 5%; /* Adjust the margin-top value as needed */
+    }
+
+    .main-box {
+        height: 40vh; /* Adjust the height as needed */
+        background-size: 60%; /* Adjust the background size as needed */
+    }
+
+    .vertical-line {
+        height: 35px; /* Adjust the height as needed */
+        margin-left: 5px; /* Adjust the margin-left value as needed */
+        margin-right: 5px; /* Adjust the margin-right value as needed */
+    }
+
+    .status-code {
+        font-size: 30px; /* Adjust the font size as needed */
+        margin-top: 10px; /* Adjust the margin-top value as needed */
+    }
+
+    .error-message {
+        font-size: 16px; /* Adjust the font size as needed */
+    }
+
+    .bottom-box {
+        margin-bottom: 5%; /* Adjust the margin-bottom value as needed */
+        margin-left: 25%; /* Adjust the margin-left value as needed */
+    }
+
+    .message {
+        font-size: 15px; /* Adjust the font size as needed */
+    }
+
+    .return-button {
+        width: 120px; /* Adjust the button width as needed */
+        height: 35px; /* Adjust the button height as needed */
+        font-size: 12px; /* Adjust the font size as needed */
+        margin-top: 10px; /* Adjust the margin-top value as needed */
+        margin-left: 5px; /* Adjust the margin-left value as needed */
+    }
+}

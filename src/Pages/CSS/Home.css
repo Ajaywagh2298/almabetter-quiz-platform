@@ -18,3 +18,11 @@
 .bgAnimation {
     margin-top: 6%;
 }
+/* Default styles for larger screens */
+.game-card {
+    max-width: 350px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #34495E;
+}

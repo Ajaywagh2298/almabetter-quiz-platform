@@ -86,3 +86,27 @@
     width: 150px;
     height: 150px;
 }
+
+@media (max-width: 768px) {
+    .main-box-1 {
+        padding-left: 2px; /* decrease left padding for smaller screens */
+    }
+
+    .right-animation,
+    .left-animation {
+        width: 100%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .right-body-text {
+        width: 100%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+        font-size: 16px;
+    }
+
+    .right-body-text:before {
+        left: -50px; /* Adjust position for smaller screens */
+        width: 100px; /* Adjust width for smaller screens */
+        height: 100px; /* Adjust height for smaller screens */
+    }
+}

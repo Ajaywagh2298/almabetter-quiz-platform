@@ -109,3 +109,77 @@
     }
 }
 
+/* Styles for screen widths between 768.1px and 1200px */
+@media (min-width: 768.1px) and (max-width: 1200px) {
+    #container {
+        width: 80%; /* Adjust the width as needed */
+        padding: 20px; /* Adjust the padding as needed */
+    }
+
+    .quiz-title {
+        font-size: 3vh; /* Adjust the font size as needed */
+    }
+
+    .quiz-option-container {
+        width: 40%; /* Adjust the width as needed */
+    }
+
+    .question-container {
+        flex-direction: column; /* Change to a column layout */
+    }
+
+    .question-index {
+        font-size: 2.5vh; /* Adjust the font size as needed */
+        width: 40px; /* Adjust the width as needed */
+    }
+
+    .question-name {
+        font-size: 2vh; /* Adjust the font size as needed */
+    }
+
+    .next-button {
+        width: 200px; /* Adjust the width as needed */
+    }
+
+    .question-list {
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+/* Styles for screen widths equal to or greater than 768px (including 768px) */
+@media (max-width: 768px) {
+    #container {
+        width: 90%; /* Adjust the width as needed */
+    }
+
+    .quiz-title {
+        font-size: 4vh; /* Adjust the font size as needed */
+    }
+
+    .quiz-option-container {
+        width: 45%; /* Adjust the width as needed */
+    }
+
+    .question-container {
+        flex-direction: row; /* Change back to row layout */
+    }
+
+    .question-index {
+        font-size: 3vh; /* Adjust the font size as needed */
+        width: 60px; /* Adjust the width as needed */
+    }
+
+    .question-name {
+        font-size: 2vh; /* Adjust the font size as needed */
+    }
+
+    .next-button {
+        width: 100px; /* Adjust the width as needed */
+        font-size: 12px;
+        padding: 2%;
+    }
+
+    .question-list {
+        margin-left: 2%; /* Restore left margin */
+    }
+}

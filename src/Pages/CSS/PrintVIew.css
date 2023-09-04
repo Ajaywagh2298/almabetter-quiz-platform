@@ -1,0 +1,28 @@
+/* print.css */
+
+/* Hide elements that should not be printed */
+@media print {
+    .footer-btn {
+        display: none;
+    }
+
+    /* Adjust styles for the printed page */
+    .result-container {
+        padding: 0; /* Remove padding for printing */
+        margin: 0; /* Remove margin for printing */
+    }
+
+    .outer-border {
+        border: none; /* Remove border for printing */
+    }
+
+    .inner-dotted-border {
+        border: none; /* Remove border for printing */
+    }
+
+    .result-footer {
+        margin: 0; /* Remove margin for printing */
+    }
+
+    /* Add any other print-specific styles here */
+}
