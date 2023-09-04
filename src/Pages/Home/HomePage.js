@@ -12,7 +12,7 @@ const HomePage = () => {
         <div>
             <div style={{marginTop:"13%"}}>
                 <div style={{display:"flex",alignItems:"center",justifyContent:"space-evenly",flexWrap:"wrap"}}>
-                    <Card sx={{ maxWidth: 350, marginTop:"20px",textDecoration:"none", borderRadius:"20px", boxShadow:"2px 2px 4px #34495E"} } component={Link} to={"/create-new"}>
+                    <Card className={'btn-card'} sx={{ maxWidth: 350, marginTop:"20px",textDecoration:"none", borderRadius:"20px", boxShadow:"2px 2px 4px #34495E"} } component={Link} to={"/create-new"}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -28,7 +28,7 @@ const HomePage = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                    <Card sx={{ maxWidth: 350,marginTop:"20px",textDecoration:"none",borderRadius:"20px", boxShadow:"2px 2px 4px #34495E" }} component={Link} to={"/my-quiz"}>
+                    <Card  className={'btn-card'} sx={{ maxWidth: 350,marginTop:"20px",textDecoration:"none",borderRadius:"20px", boxShadow:"2px 2px 4px #34495E" }} component={Link} to={"/my-quiz"}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -44,7 +44,7 @@ const HomePage = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                    <Card sx={{ maxWidth: 350, marginTop:"20px",textDecoration:"none", borderRadius:"20px", boxShadow:"2px 2px 4px #34495E"}} component={Link} to={"/play-quiz"}>
+                    <Card className={'btn-card'} sx={{ maxWidth: 350, marginTop:"20px",textDecoration:"none", borderRadius:"20px", boxShadow:"2px 2px 4px #34495E"}} component={Link} to={"/play-quiz"}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"

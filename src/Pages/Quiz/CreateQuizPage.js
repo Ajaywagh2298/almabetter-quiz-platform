@@ -154,8 +154,8 @@ const CreateQuizPage = () => {
         titleRef.current.value = "";
         descriptionRef.current.value = "";
 
-        //This will redirect the page to create page again(change the code after geting my quiz code)
-        navigate("/create-new");
+        //This will redirect the page to create page again
+        navigate("/my-quiz");
               }
     };
 

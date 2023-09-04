@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
 import {resetQuiz} from "../../ReduxController/Actions/ActionsScript";
 import "../CSS/ResultPage.css"
 import MilitaryTechSharpIcon from '@mui/icons-material/MilitaryTechSharp';
+import LocalPrintshopOutlinedIcon from '@mui/icons-material/LocalPrintshopOutlined';
+import RotateLeftOutlinedIcon from '@mui/icons-material/RotateLeftOutlined';
+import {Button} from "@mui/material";
 function ResultPage(props) {
-    const results = useSelector((state) => state.reducer.answers); //retrieving the array of selected answers
+    // const results = useSelector((state) => state.reducer.answers);
+    const results = useSelector((state) => state.reducer.answers) || []
     const mapped = results.map((el) => el.isCorrect); //array of isCorrect values(either true or false)
 
-    const navigate = useNavigate(); //to navigate to other route
-    const disptach = useDispatch(); //to dispatch action
+    const navigate = useNavigate();
+    const disptach = useDispatch();
+    const printRef = useRef(null);
 
-    //this func will run when "Done" button is clicked
     const resetQuizHandler = () => {
         disptach(resetQuiz());
         navigate("/");
     };
-    setTimeout(() => {
-        resetQuizHandler();
-    }   , 5000);
+    const printCertificate = () => {
+        const printStylesheet = document.createElement("link");
+        printStylesheet.setAttribute("rel", "stylesheet");
+        printStylesheet.setAttribute("type", "text/css");
+        printStylesheet.setAttribute("href", "../CSS/PrintView.css");
+
+        // Append the print stylesheet to the document head
+        document.head.appendChild(printStylesheet);
+
+        // Print the page
+        window.print();
+
+        // Remove the print stylesheet after printing
+        document.head.removeChild(printStylesheet);
+    };
     return (
         <div>
-            <div className="result-container">
+            <div className="result-container" ref={printRef}>
                 <div className="outer-border">
                     <div className="inner-dotted-border">
                         <div className={'result-header'}>
@@ -67,6 +83,15 @@ function ResultPage(props) {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={'footer-btn'}>
+                    <Button className={'btn'} variant="outlined" color="warning" style={{color:'#283747',marginRight:'2%'}}
+                        onClick={() => resetQuizHandler()}>
+                       <RotateLeftOutlinedIcon /> Reset Quiz
+                    </Button>
+                <Button className={'btn-print'} variant="outlined" color="success" style={{color:'#283747'}} onClick={() => printCertificate()}>
+                   <LocalPrintshopOutlinedIcon/> Print Certificate
+                </Button>
             </div>
         </div>
     );
