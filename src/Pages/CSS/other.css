@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .main-box-1 {
     flex-direction: column;
     justify-content: center;
@@ -5,6 +6,7 @@
     padding-left: 3%;
     margin-top: 10px;
 }
+
 .info-header {
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -13,11 +15,12 @@
     word-spacing: 6px;
     font-weight: bold;
 }
+
 .right-animation {
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin:4%;
+    margin: 4%;
     margin-top: 0;
     margin-bottom: 0;
     width: 50%;
@@ -33,7 +36,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin:4%;
+    margin: 4%;
     margin-top: 0;
     margin-bottom: 0;
     width: 50%;
@@ -63,6 +66,7 @@
     position: relative;
     object-fit: cover;
 }
+
 .right-body-text {
     margin: 2%;
     padding: 0;
@@ -87,26 +91,35 @@
     height: 150px;
 }
 
+/* Media query for screens between 768.1px and 1200px */
+@media (max-width: 1200px) {
+    .right-animation,
+    .left-animation {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+/* Media query for screens equal to or less than 768px */
 @media (max-width: 768px) {
     .main-box-1 {
-        padding-left: 2px; /* decrease left padding for smaller screens */
+        padding-left: 0; /* Remove left padding on smaller screens */
     }
 
     .right-animation,
     .left-animation {
-        width: 100%; /* Adjust width for smaller screens */
-        height: auto; /* Adjust height for smaller screens */
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    .info-header {
+        font-size: 18px; /* Reduce font size on smaller screens */
+    }
+
+    .avator {
+        width: 80px; /* Adjust avatar size on smaller screens */
+        height: 80px;
     }
 
     .right-body-text {
-        width: 100%; /* Adjust width for smaller screens */
-        height: auto; /* Adjust height for smaller screens */
-        font-size: 16px;
-    }
-
-    .right-body-text:before {
-        left: -50px; /* Adjust position for smaller screens */
-        width: 100px; /* Adjust width for smaller screens */
-        height: 100px; /* Adjust height for smaller screens */
+        width: 90%; /* Adjust width of right-body-text on smaller screens */
     }
 }
